@@ -1,0 +1,80 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Badge from "../common/Badge";
+
+export default function CTASection() {
+  return (
+    <section
+      id="join"
+      className="relative min-h-[80vh] flex items-center justify-center gradient-mesh overflow-hidden pb-32 sm:pb-20"
+    >
+      <div className="section-container relative z-10 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <Image
+            src="/logos/sharematch-mark.svg"
+            alt=""
+            width={48}
+            height={48}
+            className="mx-auto mb-8 opacity-60"
+          />
+
+          <Badge variant="gold" className="mb-6">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-400" />
+            </span>
+            Now Live
+          </Badge>
+
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+            Join the Journey
+          </h2>
+
+          <p className="text-lg text-text-secondary max-w-xl mx-auto mb-10">
+            The world&rsquo;s first Shariah-compliant tokenised asset marketplace
+            is live. Create your account and start exploring performance-based
+            digital assets today.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-24 sm:mb-16">
+            <a
+              href="https://rwa.sharematch.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gold-500 text-bg-primary font-semibold text-lg hover:bg-gold-400 transition-all duration-300 hover:-translate-y-0.5 shimmer"
+            >
+              Create an Account
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <a
+              href="mailto:will@sharematch.me"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/10 text-text-primary font-semibold text-lg hover:bg-white/5 transition-all duration-300"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Footer */}
+      <div className="absolute bottom-0 left-0 right-0 py-6 border-t border-white/5">
+        <div className="section-container">
+          <p className="text-xs text-text-muted text-center leading-relaxed max-w-2xl mx-auto">
+            This page is for information purposes only and does not constitute
+            an offer to sell or a solicitation of an offer to buy any securities.
+            &copy; {new Date().getFullYear()} ShareMatch. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

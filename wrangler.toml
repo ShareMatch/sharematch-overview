@@ -1,0 +1,9 @@
+name = "sharematch-overview"
+compatibility_date = "2024-12-01"
+pages_build_output_dir = "out"
+
+[env.production]
+name = "sharematch-overview"
+
+[env.preview]
+name = "sharematch-overview-preview"
