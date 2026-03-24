@@ -1,23 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
 import SectionWrapper from "../common/SectionWrapper";
 import Badge from "../common/Badge";
 import GlowCard from "../common/GlowCard";
-import { Building2, Shield, Cpu, Globe } from "lucide-react";
+import { Shield, Cpu, Globe, Scale } from "lucide-react";
 
 const pillars = [
   {
-    icon: Building2,
-    title: "UK-Incorporated, GCC-First",
+    icon: Scale,
+    title: "Fatwa Backed & Haqq Mali",
     description:
-      "Pachira Holdings Ltd (UK) with strategic operations across London, Dubai, and Riyadh. Built for regulatory alignment, not arbitrage.",
+      "Independent Shariah Fatwa recognises our tokens as Haqq Mali, a legitimate financial asset that can be possessed, transferred, inherited, and traded under Islamic law.",
   },
   {
     icon: Shield,
-    title: "Shariah-Certified",
+    title: "Patent-Pending IP",
     description:
-      "Formal Fatwa issued December 2025, covering contract structure, risk transfer, fee treatment, custody, and settlement. Monitored by SAHL Investment Incubators.",
+      "Smart-contract logic, compliance workflows, and settlement mechanisms are patent-pending. Global trademark applications in progress across GCC, Asia Pacific, and Europe.",
   },
   {
     icon: Cpu,
@@ -33,12 +32,31 @@ const pillars = [
   },
 ];
 
-const team = [
-  { role: "CEO", location: "London" },
-  { role: "CTO", location: "Dubai" },
-  { role: "Head of Risk & Compliance", location: "Dubai" },
-  { role: "Full Stack Development", location: "Dubai" },
-  { role: "Blockchain Development", location: "London" },
+const board = [
+  { name: "Gillian Hughes", role: "Chairman" },
+  { name: "Joshua Hearne", role: "Non-Executive Director" },
+  { name: "Richard Walker", role: "Non-Executive Director (Finance)" },
+  { name: "Rawad Abou Diab", role: "Non-Executive Director" },
+  { name: "Michael Fortun", role: "Head of Compliance" },
+];
+
+const executive = [
+  { name: "Will Wilde", role: "Chief Executive Officer" },
+  { name: "Resmimol Krishnakumari", role: "Chief Technical Officer" },
+  { name: "Paul Phillpot", role: "Head of Partnerships" },
+];
+
+const partners = [
+  "Partis Solutions",
+  "Conexus",
+  "Damisa",
+  "SAHL Investment Incubators",
+  "LeapFrog",
+  "Seed Legals",
+  "EIP",
+  "Prysm Financial",
+  "Alfred Henry",
+  "SumSub",
 ];
 
 export default function WhoWeAreSection() {
@@ -69,31 +87,52 @@ export default function WhoWeAreSection() {
         ))}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="glass-card p-6 md:p-8"
-      >
-        <h3 className="text-lg font-semibold mb-4 text-center">
-          Core Team
-        </h3>
-        <div className="flex flex-wrap justify-center gap-3">
-          {team.map((t) => (
-            <div
-              key={t.role}
-              className="px-4 py-2 rounded-lg bg-white/5 text-sm"
+      {/* Board & Leadership */}
+      <div className="grid md:grid-cols-2 gap-6 mb-8">
+        <div className="glass-card p-6">
+          <h3 className="text-base font-semibold mb-4">Board of Directors</h3>
+          <div className="space-y-3">
+            {board.map((t) => (
+              <div key={t.name} className="flex items-center justify-between">
+                <span className="text-sm text-text-primary font-medium">{t.name}</span>
+                <span className="text-xs text-text-muted">{t.role}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="glass-card p-6">
+          <h3 className="text-base font-semibold mb-4">Executive Team</h3>
+          <div className="space-y-3">
+            {executive.map((t) => (
+              <div key={t.name} className="flex items-center justify-between">
+                <span className="text-sm text-text-primary font-medium">{t.name}</span>
+                <span className="text-xs text-text-muted">{t.role}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 pt-4 border-t border-white/5">
+            <p className="text-xs text-text-muted">
+              + Full stack and blockchain development teams across London and Dubai
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Strategic Partners */}
+      <div className="glass-card p-6">
+        <h3 className="text-base font-semibold mb-4 text-center">Strategic Partners</h3>
+        <div className="flex flex-wrap justify-center gap-2">
+          {partners.map((p) => (
+            <span
+              key={p}
+              className="px-3 py-1.5 rounded-full bg-white/5 text-xs text-text-secondary"
             >
-              <span className="text-text-primary font-medium">{t.role}</span>
-              <span className="text-text-muted ml-2">{t.location}</span>
-            </div>
+              {p}
+            </span>
           ))}
         </div>
-        <p className="text-xs text-text-muted text-center mt-4">
-          Actively hiring: CFO, Head of Strategic Ops, Head of Media, Compliance Manager
-        </p>
-      </motion.div>
+      </div>
     </SectionWrapper>
   );
 }

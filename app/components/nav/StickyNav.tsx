@@ -87,10 +87,10 @@ export default function StickyNav() {
           </div>
 
           <a
-            href="#join"
+            href="mailto:will@sharematch.me"
             className="hidden lg:inline-flex items-center px-5 py-2 text-sm font-semibold rounded-full bg-gold-500 text-bg-primary hover:bg-gold-400 transition-colors"
           >
-            Join the Journey
+            Get in Touch
           </a>
         </div>
       </nav>

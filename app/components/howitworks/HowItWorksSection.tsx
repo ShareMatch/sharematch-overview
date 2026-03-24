@@ -16,7 +16,7 @@ const steps = [
     icon: Wallet,
     step: "02",
     title: "Deposit Funds",
-    description: "Deposit USDC or use local payment rails (STC Pay, urpay, GoPay, and more). Funds convert to ShareMatch Tokens (SMT) at 1:1.",
+    description: "Deposit USDC or use supported local payment rails. Funds convert to ShareMatch Tokens (SMT) at 1:1.",
   },
   {
     icon: BarChart3,

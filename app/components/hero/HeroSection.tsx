@@ -81,14 +81,6 @@ export default function HeroSection() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </a>
-          <a
-            href="https://rwa.sharematch.me"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/10 text-text-primary font-semibold text-lg hover:bg-white/5 transition-all duration-300"
-          >
-            Create an Account
-          </a>
         </motion.div>
       </div>
 
