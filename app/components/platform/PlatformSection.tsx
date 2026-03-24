@@ -84,7 +84,7 @@ export default function PlatformSection() {
             </div>
           </div>
         </div>
-        <div className="absolute -inset-10 -z-10 bg-gold-500/5 rounded-full blur-3xl" />
+        <div className="absolute -inset-10 -z-10 bg-gold-500/5 rounded-full blur-3xl overflow-hidden pointer-events-none" />
       </motion.div>
 
       <div className="flex flex-wrap justify-center gap-3">

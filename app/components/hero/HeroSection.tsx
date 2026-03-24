@@ -82,7 +82,9 @@ export default function HeroSection() {
             </svg>
           </a>
           <a
-            href="#join"
+            href="https://rwa.sharematch.me"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/10 text-text-primary font-semibold text-lg hover:bg-white/5 transition-all duration-300"
           >
             Create an Account

@@ -27,9 +27,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
   font-family: var(--font-sans);
