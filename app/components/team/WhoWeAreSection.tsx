@@ -70,11 +70,6 @@ export default function WhoWeAreSection() {
             <div className="browser-dot bg-red-500" />
             <div className="browser-dot bg-yellow-500" />
             <div className="browser-dot bg-green-500" />
-            <div className="flex-1 mx-4">
-              <div className="bg-white/5 rounded-md px-3 py-1 text-[11px] md:text-xs text-text-muted text-center">
-                rwa.sharematch.me
-              </div>
-            </div>
           </div>
           <div className="relative aspect-video overflow-hidden">
             <video

@@ -49,7 +49,7 @@ export default function HeroSection() {
           className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 max-w-5xl mx-auto"
         >
           The World&rsquo;s First{" "}
-          <span className="bg-gradient-to-r from-gold-500 to-gold-300 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent">
             Shariah-Compliant
           </span>{" "}
           Sports Investment Market
@@ -74,7 +74,7 @@ export default function HeroSection() {
         >
           <a
             href="#who"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gold-500 text-bg-primary font-semibold text-lg hover:bg-gold-400 transition-all duration-300 hover:-translate-y-0.5 shimmer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-500 text-bg-primary font-semibold text-lg hover:bg-emerald-400 transition-all duration-300 hover:-translate-y-0.5 shimmer"
           >
             Learn More
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

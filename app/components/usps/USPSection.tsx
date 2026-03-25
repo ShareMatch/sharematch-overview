@@ -81,6 +81,57 @@ export default function USPSection() {
           </GlowCard>
         ))}
       </div>
+
+      {/* Third-party reinforcement */}
+      <div className="mt-16 glass-card p-8 max-w-4xl mx-auto">
+        <h3 className="text-lg font-semibold text-center mb-6">Reinforced by Third Parties</h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex gap-3">
+            <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 mt-0.5">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold mb-1">Independent Fatwa Approval</p>
+              <p className="text-xs text-text-secondary leading-relaxed">
+                Formal ruling from recognised Islamic scholars confirming full Shariah compliance of the platform, tokens, and settlement logic.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 mt-0.5">
+              <Lock className="w-4 h-4 text-emerald-400" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold mb-1">Patent-Pending Technology</p>
+              <p className="text-xs text-text-secondary leading-relaxed">
+                Core smart-contract logic, compliance workflows, and settlement mechanisms filed with global trademark applications in progress.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 mt-0.5">
+              <Scale className="w-4 h-4 text-emerald-400" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold mb-1">AAOIFI Standards Compliance</p>
+              <p className="text-xs text-text-secondary leading-relaxed">
+                All tokens structured in accordance with standards published by the Accounting and Auditing Organisation for Islamic Financial Institutions.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 mt-0.5">
+              <Fingerprint className="w-4 h-4 text-emerald-400" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold mb-1">KYC/AML by SumSub</p>
+              <p className="text-xs text-text-secondary leading-relaxed">
+                Industry-leading identity verification and anti-money laundering compliance powered by SumSub, trusted by thousands of regulated platforms globally.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </SectionWrapper>
   );
 }

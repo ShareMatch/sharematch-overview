@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import SectionWrapper from "../common/SectionWrapper";
 import Badge from "../common/Badge";
 import { UserPlus, Wallet, BarChart3, TrendingUp, Bot, ArrowDownToLine } from "lucide-react";
@@ -11,36 +12,42 @@ const steps = [
     step: "01",
     title: "Sign Up & Verify",
     description: "Create an account with instant KYC verification. Geolocation compliance ensures you are in a supported jurisdiction.",
+    screenshot: "/screenshots/step-1-signup.png",
   },
   {
     icon: Wallet,
     step: "02",
     title: "Deposit Funds",
     description: "Deposit USDC or use supported local payment rails. Funds convert to ShareMatch Tokens (SMT) at 1:1.",
+    screenshot: "/screenshots/step-2-deposit.png",
   },
   {
     icon: BarChart3,
     step: "03",
     title: "Browse Markets",
     description: "Choose from 10+ performance indices: EPL, UCL, SPL, NBA, NFL, F1, T20 Cricket, FIFA World Cup, and more.",
+    screenshot: "/screenshots/step-3-markets.png",
   },
   {
     icon: TrendingUp,
     step: "04",
     title: "Trade Performance Tokens",
     description: "Buy Index Asset Tokens (IATs) whose value is tied to real-world performance outcomes. No odds, no house, no gambling.",
+    screenshot: "/screenshots/step-4-trade.png",
   },
   {
     icon: Bot,
     step: "05",
     title: "AI-Powered Insights",
     description: "HAL AI provides real-time, search-grounded analysis, news summaries, and educational content to support your decisions.",
+    screenshot: "/screenshots/step-5-ai.png",
   },
   {
     icon: ArrowDownToLine,
     step: "06",
     title: "Settle & Withdraw",
     description: "Deterministic on-chain settlement at market close. Withdraw to USDC at any time. Fully auditable on Solana.",
+    screenshot: "/screenshots/step-6-settle.png",
   },
 ];
 
@@ -68,11 +75,20 @@ export default function HowItWorksSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
-            className="glass-card p-6 relative group"
+            className="glass-card p-6 relative group overflow-hidden"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center">
-                <s.icon className="w-5 h-5 text-gold-400" />
+            <div className="relative aspect-[4/3] mb-4 rounded-lg overflow-hidden -mx-2 -mt-2">
+              <Image
+                src={s.screenshot}
+                alt={s.title}
+                fill
+                className="object-cover object-top transform rotate-[-2deg] scale-110 group-hover:scale-115 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 to-transparent" />
+            </div>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+                <s.icon className="w-5 h-5 text-emerald-400" />
               </div>
               <span className="text-xs font-mono text-text-muted">{s.step}</span>
             </div>

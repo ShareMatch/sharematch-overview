@@ -49,7 +49,7 @@ export default function StickyNav() {
     <>
       <motion.div
         style={{ scaleX }}
-        className="fixed top-0 left-0 right-0 h-[2px] bg-gold-500 origin-left z-60"
+        className="fixed top-0 left-0 right-0 h-[2px] bg-emerald-500 origin-left z-60"
       />
 
       <nav
@@ -77,7 +77,7 @@ export default function StickyNav() {
                 href={`#${item.id}`}
                 className={`px-3 py-1.5 text-sm rounded-full transition-all duration-300 ${
                   active === item.id
-                    ? "text-gold-400 bg-gold-500/10"
+                    ? "text-emerald-400 bg-emerald-500/10"
                     : "text-text-secondary font-medium hover:text-white"
                 }`}
               >
@@ -88,7 +88,7 @@ export default function StickyNav() {
 
           <a
             href="mailto:will@sharematch.me"
-            className="hidden lg:inline-flex items-center px-5 py-2 text-sm font-semibold rounded-full bg-gold-500 text-bg-primary hover:bg-gold-400 transition-colors"
+            className="hidden lg:inline-flex items-center px-5 py-2 text-sm font-semibold rounded-full bg-emerald-500 text-bg-primary hover:bg-emerald-400 transition-colors"
           >
             Get in Touch
           </a>
