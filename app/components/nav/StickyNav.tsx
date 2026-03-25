@@ -66,7 +66,7 @@ export default function StickyNav() {
             width={200}
             height={48}
             className={`transition-all duration-300 ${
-              scrolled ? "h-8 md:h-12 w-auto" : "h-10 md:h-16 w-auto"
+              scrolled ? "h-10 md:h-14 w-auto" : "h-12 md:h-20 w-auto"
             }`}
           />
 
