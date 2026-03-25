@@ -61,7 +61,7 @@ export default function StickyNav() {
       >
         <div className="section-container flex items-center justify-between">
           <Image
-            src="/logos/sharematch-lockup.svg"
+            src="/logos/sharematch-lockup.png"
             alt="ShareMatch"
             width={200}
             height={48}

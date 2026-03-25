@@ -17,7 +17,7 @@ export default function CTASection() {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="/logos/sharematch-mark.svg"
+            src="/logos/sharematch-mark.png"
             alt=""
             width={48}
             height={48}
