@@ -6,14 +6,16 @@ import SectionWrapper from "../common/SectionWrapper";
 import Badge from "../common/Badge";
 
 const capabilities = [
-  "Live & Trading",
-  "Solana On-Chain Settlement",
-  "Fatwa Approved",
-  "KYC/AML via SumSub",
-  "HAL AI Engine",
-  "Real-World Asset Structure",
-  "Digital Payment Rails",
-  "Multi-Market Coverage",
+  "Football",
+  "Cricket",
+  "Golf",
+  "Motorsports",
+  "Esports",
+  "Rugby",
+  "Basketball",
+  "American Football",
+  "Baseball",
+  "Global Events",
 ];
 
 export default function PlatformSection() {
@@ -24,12 +26,13 @@ export default function PlatformSection() {
           The Platform
         </Badge>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-          A Live, Market-Ready Product
+          Secure, Ethical Investing in Shariah-Compliant Sports Assets
         </h2>
         <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-          Not a concept. Not a whitepaper. ShareMatch is live, with real users
-          trading across football, basketball, motorsport, cricket, esports, and
-          global events.
+          ShareMatch gives you proportional ownership in real sports asset pools
+          through secure, blockchain-backed tokens. Enjoy full financial rights
+          and a regulated secondary market, guaranteeing 100% Shariah compliance
+          and true asset-backed performance.
         </p>
       </div>
 

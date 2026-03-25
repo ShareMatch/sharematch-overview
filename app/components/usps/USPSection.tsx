@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import SectionWrapper from "../common/SectionWrapper";
 import Badge from "../common/Badge";
 import GlowCard from "../common/GlowCard";
@@ -16,28 +15,28 @@ const usps = [
   },
   {
     icon: Lock,
-    title: "Regulatory Moat",
+    title: "Fully Regulated for Your Protection",
     description:
-      "Competitors operate by regulatory arbitrage. ShareMatch is built for regulatory acceptance, making it the only platform that can be marketed publicly in GCC markets without reputational risk.",
+      "While competitors operate by regulatory arbitrage, ShareMatch is built on total transparency. We are engineered for full regulatory approval across the GCC, ensuring your investments are secure, officially recognised, and fully protected.",
     glow: "emerald" as const,
   },
   {
     icon: Brain,
     title: "HAL AI Engine",
     description:
-      "A proprietary 9-agent AI system providing real-time market analysis, Shariah compliance screening, content moderation, and intelligence gathering, all powered by Google Gemini with search grounding.",
+      "Powered by Google Gemini, our proprietary AI delivers real-time market analysis, up-to-the-minute sports intelligence, and continuous Shariah-compliance screening to keep you ahead of the game.",
     glow: "gold" as const,
   },
   {
     icon: Layers,
     title: "Dual-Token Architecture",
     description:
-      "SMT as the permanent protocol token. IATs as market-cycle-specific performance tokens. Fixed 100-unit custodial bucket model. Deterministic, atomic settlement on Solana.",
+      "One token powers your platform experience; another represents your real-world sports assets. Built on the Solana blockchain for lightning-fast trades and perfectly transparent ownership shares.",
     glow: "emerald" as const,
   },
   {
     icon: Scale,
-    title: "Not Gambling",
+    title: "Halal Investing",
     description:
       "Performance units, not bets. No house, no odds-setting. Every token is a real-world asset (haqq mali) with a defined lifecycle, transparent pricing, and auditable settlement.",
     glow: "gold" as const,
@@ -46,7 +45,7 @@ const usps = [
     icon: Fingerprint,
     title: "Multi-Layered Compliance",
     description:
-      "KYC/AML via SumSub. HAYA AI agent for real-time Shariah content screening (AAOIFI principles). Geolocation enforcement. Immutable audit trail on-chain.",
+      "Advanced KYC/AML identity verification and real-time AI Shariah screening (AAOIFI principles), backed by permanent blockchain records built to keep your portfolio safe and ethical.",
     glow: "emerald" as const,
   },
 ];
@@ -59,11 +58,10 @@ export default function USPSection() {
           Why ShareMatch
         </Badge>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-          Six Structural Advantages
+          The ShareMatch Edge
         </h2>
         <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-          These are not features. They are architectural decisions that cannot be
-          retrofitted by incumbents.
+          6 unique reasons why we are the future of ethical sports investing.
         </p>
       </div>
 

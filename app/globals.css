@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg-primary: #0D0D1A;
-  --color-bg-secondary: #111124;
-  --color-bg-elevated: #1A1A2E;
+  --color-bg-primary: #074e2c;
+  --color-bg-secondary: #053d22;
+  --color-bg-elevated: #0a5e35;
   --color-bg-card: rgba(255, 255, 255, 0.03);
 
-  --color-gold-600: #E05A0E;
-  --color-gold-500: #FF6A13;
-  --color-gold-400: #FF8A45;
-  --color-gold-300: #FFAA75;
+  --color-gold-600: #d97706;
+  --color-gold-500: #f59e0b;
+  --color-gold-400: #fbbf24;
+  --color-gold-300: #fcd34d;
   --color-emerald-900: #005430;
   --color-emerald-700: #047857;
   --color-emerald-500: #10b981;
@@ -18,9 +18,9 @@
   --color-amber-500: #f59e0b;
   --color-amber-400: #fbbf24;
 
-  --color-text-primary: #F8F8FF;
-  --color-text-secondary: #A0A0C0;
-  --color-text-muted: #6B6B8A;
+  --color-text-primary: #f8fffe;
+  --color-text-secondary: #aacbc4;
+  --color-text-muted: #6b8a84;
 
   --font-sans: "Inter", sans-serif;
 }
@@ -40,8 +40,8 @@ body {
 }
 
 ::selection {
-  background: rgba(255, 106, 19, 0.3);
-  color: #F8F8FF;
+  background: rgba(16, 185, 129, 0.3);
+  color: #f8fffe;
 }
 
 .section-container {
@@ -62,8 +62,8 @@ body {
 .glass-card-hover:hover {
   transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 106, 19, 0.2);
-  box-shadow: 0 8px 30px rgba(255, 106, 19, 0.08);
+  border-color: rgba(16, 185, 129, 0.2);
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.08);
 }
 
 .shimmer {
@@ -104,9 +104,9 @@ body {
   width: 200%;
   height: 200%;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(255, 106, 19, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(255, 106, 19, 0.05) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 50%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(245, 158, 11, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
   animation: mesh-rotate 30s linear infinite;
   pointer-events: none;
 }
@@ -116,7 +116,7 @@ body {
 }
 
 .glow-gold {
-  box-shadow: 0 0 80px rgba(255, 106, 19, 0.15);
+  box-shadow: 0 0 80px rgba(245, 158, 11, 0.15);
 }
 .glow-emerald {
   box-shadow: 0 0 80px rgba(16, 185, 129, 0.15);
@@ -126,24 +126,24 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0D0D1A;
+  background: #074e2c;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2D2D44;
+  background: #2d4a44;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF6A13;
+  background: #10b981;
 }
 
 .browser-frame {
-  background: #1a1a2e;
+  background: #0d2626;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 .browser-frame-bar {
-  background: #16162a;
+  background: #0a2020;
   padding: 12px 16px;
   display: flex;
   align-items: center;

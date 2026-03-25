@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Badge from "../common/Badge";
 
 export default function CTASection() {
   return (
@@ -25,30 +24,33 @@ export default function CTASection() {
             className="mx-auto mb-8 opacity-60"
           />
 
-          <Badge variant="gold" className="mb-6">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-400" />
-            </span>
-            Now Live
-          </Badge>
-
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
             Join the Journey
           </h2>
 
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-10">
-            The world&rsquo;s first Shariah-compliant tokenised asset marketplace
-            is live. Get in touch to learn more about the platform and partnership
-            opportunities.
+            Step into the future of Halal SportsFi investing. Be the first to
+            experience the world&rsquo;s only Shariah-compliant sports investment
+            market when we open our digital doors.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-24 sm:mb-16">
             <a
-              href="mailto:will@sharematch.me"
+              href="https://rwa.sharematch.me"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gold-500 text-bg-primary font-semibold text-lg hover:bg-gold-400 transition-all duration-300 hover:-translate-y-0.5 shimmer"
             >
-              Get in Touch
+              Register for Early Access
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <a
+              href="mailto:will@sharematch.me"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/10 text-text-primary font-semibold text-lg hover:bg-white/5 transition-all duration-300 hover:-translate-y-0.5"
+            >
+              Contact Us
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>

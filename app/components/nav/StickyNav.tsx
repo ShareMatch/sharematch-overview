@@ -5,7 +5,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import Image from "next/image";
 
 const NAV_ITEMS = [
-  { id: "who", label: "Who We Are" },
+  { id: "who", label: "What is ShareMatch" },
   { id: "platform", label: "Platform" },
   { id: "how", label: "How It Works" },
   { id: "usps", label: "Why Us" },

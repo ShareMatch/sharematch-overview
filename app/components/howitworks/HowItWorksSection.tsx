@@ -52,7 +52,7 @@ export default function HowItWorksSection() {
           How It Works
         </Badge>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-          Six Steps. Fully On-Chain.
+          How ShareMatch Works in 6 Simple Steps
         </h2>
         <p className="text-text-secondary text-lg max-w-2xl mx-auto">
           From sign-up to settlement, the entire journey is transparent,

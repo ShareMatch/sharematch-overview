@@ -48,11 +48,11 @@ export default function HeroSection() {
           transition={{ delay: 0.5, duration: 0.8, ease: [0.22, 0.61, 0.36, 1] }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 max-w-5xl mx-auto"
         >
-          The Future of{" "}
+          The World&rsquo;s First{" "}
           <span className="bg-gradient-to-r from-gold-500 to-gold-300 bg-clip-text text-transparent">
-            Performance-Based
+            Shariah-Compliant
           </span>{" "}
-          Digital Assets
+          Sports Investment Market
         </motion.h1>
 
         <motion.p
@@ -61,9 +61,9 @@ export default function HeroSection() {
           transition={{ delay: 0.7, duration: 0.6 }}
           className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          The world&rsquo;s first and only Shariah-compliant tokenised asset
-          marketplace. Trade performance indices across sport, culture, and
-          global events, built on Solana.
+          Welcome to the Next-Gen of Investing. Buy, sell, and grow your
+          portfolio on our 100% Shariah-compliant platform designed for secure,
+          end-to-end, ethical investing.
         </motion.p>
 
         <motion.div

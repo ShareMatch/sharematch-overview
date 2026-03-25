@@ -3,12 +3,10 @@
 import { motion } from "framer-motion";
 import SectionWrapper from "../common/SectionWrapper";
 import Badge from "../common/Badge";
-import GlowCard from "../common/GlowCard";
-import { Globe, Users, Smartphone, CreditCard } from "lucide-react";
+import { Globe, CreditCard } from "lucide-react";
 
 const phases = [
   {
-    phase: "Phase 1",
     region: "GCC",
     focus: "Saudi Arabia, UAE, wider Gulf",
     tam: "40M+",
@@ -20,7 +18,6 @@ const phases = [
     rails: ["STC Pay", "urpay", "tiqmo"],
   },
   {
-    phase: "Phase 2",
     region: "Asia Pacific",
     focus: "Indonesia, India, Pakistan, Bangladesh",
     tam: "800M+",
@@ -31,7 +28,6 @@ const phases = [
     rails: ["GoPay", "DANA", "JazzCash", "bKash"],
   },
   {
-    phase: "Phase 3",
     region: "Greater MENA",
     focus: "T\u00fcrkiye, North Africa, Levant",
     tam: "340M+",
@@ -42,7 +38,6 @@ const phases = [
     rails: ["Fawry", "Papara", "Local Rails"],
   },
   {
-    phase: "Phase 4+",
     region: "Africa & Global Diaspora",
     focus: "Sub-Saharan Africa, Europe, Americas",
     tam: "400M+",
@@ -56,9 +51,7 @@ const phases = [
 
 const demographics = [
   { label: "Total Addressable Market", value: "1.5B+", sub: "mobile-connected Muslims globally" },
-  { label: "Target Entry Point", value: "~$1.30", sub: "5 SAR minimum, micro-entry funnel" },
   { label: "Primary Age Group", value: "18-35", sub: "digital-native, mobile-first" },
-  { label: "Key Events 2026", value: "FIFA WC", sub: "+ Esports World Cup, Riyadh" },
 ];
 
 export default function AudienceSection() {
@@ -78,7 +71,7 @@ export default function AudienceSection() {
       </div>
 
       {/* Key demographics */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+      <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto mb-16">
         {demographics.map((d, i) => (
           <motion.div
             key={d.label}
@@ -95,7 +88,7 @@ export default function AudienceSection() {
         ))}
       </div>
 
-      {/* Phase cards */}
+      {/* Region cards */}
       <div className="space-y-4">
         {phases.map((p, i) => (
           <motion.div
@@ -112,12 +105,7 @@ export default function AudienceSection() {
           >
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
               <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <Badge variant={p.highlight ? "gold" : "emerald"}>
-                    {p.phase}
-                  </Badge>
-                  <span className="text-lg font-bold">{p.region}</span>
-                </div>
+                <span className="text-lg font-bold">{p.region}</span>
                 <p className="text-sm text-text-secondary">{p.focus}</p>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {p.segments.map((s) => (

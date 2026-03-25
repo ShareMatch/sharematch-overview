@@ -1,9 +1,10 @@
 "use client";
 
+import { motion } from "framer-motion";
 import SectionWrapper from "../common/SectionWrapper";
 import Badge from "../common/Badge";
 import GlowCard from "../common/GlowCard";
-import { Shield, Cpu, Globe, Scale } from "lucide-react";
+import { Shield, Cpu, Globe, Scale, Bookmark } from "lucide-react";
 
 const pillars = [
   {
@@ -30,33 +31,12 @@ const pillars = [
     description:
       "Backed by institutional partners across M&A advisory, blockchain, compliance, and payment infrastructure. GCC Royal Family Office on the cap table.",
   },
-];
-
-const board = [
-  { name: "Gillian Hughes", role: "Chairman" },
-  { name: "Joshua Hearne", role: "Non-Executive Director" },
-  { name: "Richard Walker", role: "Non-Executive Director (Finance)" },
-  { name: "Rawad Abou Diab", role: "Non-Executive Director" },
-  { name: "Michael Fortun", role: "Head of Compliance" },
-];
-
-const executive = [
-  { name: "Will Wilde", role: "Chief Executive Officer" },
-  { name: "Resmimol Krishnakumari", role: "Chief Technical Officer" },
-  { name: "Paul Phillpot", role: "Head of Partnerships" },
-];
-
-const partners = [
-  "Partis Solutions",
-  "Conexus",
-  "Damisa",
-  "SAHL Investment Incubators",
-  "LeapFrog",
-  "Seed Legals",
-  "EIP",
-  "Prysm Financial",
-  "Alfred Henry",
-  "SumSub",
+  {
+    icon: Bookmark,
+    title: "Fully Regulated",
+    description:
+      "Engineered for full regulatory approval across the GCC, ensuring your investments are secure, officially recognised, and fully protected.",
+  },
 ];
 
 export default function WhoWeAreSection() {
@@ -64,18 +44,54 @@ export default function WhoWeAreSection() {
     <SectionWrapper id="who">
       <div className="text-center mb-16">
         <Badge variant="gold" className="mb-4">
-          Who We Are
+          What is ShareMatch
         </Badge>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-          Built for Scale, Backed by Conviction
+          The Future of Halal SportFi
         </h2>
         <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-          A focused team of fintech, blockchain, and AI specialists building at the
-          intersection of Islamic finance and digital assets.
+          Built on Solana, the platform enables users to trade sports indices
+          and outcome-based assets using skill and knowledge, while remaining
+          fully compliant with Islamic financial principles. Unlike traditional
+          iGaming or prediction markets, ShareMatch is designed as a Halal
+          financial market.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="relative max-w-4xl mx-auto mb-16"
+      >
+        <div className="browser-frame">
+          <div className="browser-frame-bar">
+            <div className="browser-dot bg-red-500" />
+            <div className="browser-dot bg-yellow-500" />
+            <div className="browser-dot bg-green-500" />
+            <div className="flex-1 mx-4">
+              <div className="bg-white/5 rounded-md px-3 py-1 text-[11px] md:text-xs text-text-muted text-center">
+                rwa.sharematch.me
+              </div>
+            </div>
+          </div>
+          <div className="relative aspect-video overflow-hidden">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/videos/platform-walkthrough.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div className="absolute -inset-10 -z-10 bg-emerald-500/5 rounded-full blur-3xl overflow-hidden pointer-events-none" />
+      </motion.div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {pillars.map((p, i) => (
           <GlowCard key={p.title} delay={i * 0.1} className="p-6">
             <p.icon className="w-8 h-8 text-gold-400 mb-4" />
@@ -85,53 +101,6 @@ export default function WhoWeAreSection() {
             </p>
           </GlowCard>
         ))}
-      </div>
-
-      {/* Board & Leadership */}
-      <div className="grid md:grid-cols-2 gap-6 mb-8">
-        <div className="glass-card p-6">
-          <h3 className="text-base font-semibold mb-4">Board of Directors</h3>
-          <div className="space-y-3">
-            {board.map((t) => (
-              <div key={t.name} className="flex items-center justify-between">
-                <span className="text-sm text-text-primary font-medium">{t.name}</span>
-                <span className="text-xs text-text-muted">{t.role}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="glass-card p-6">
-          <h3 className="text-base font-semibold mb-4">Executive Team</h3>
-          <div className="space-y-3">
-            {executive.map((t) => (
-              <div key={t.name} className="flex items-center justify-between">
-                <span className="text-sm text-text-primary font-medium">{t.name}</span>
-                <span className="text-xs text-text-muted">{t.role}</span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-4 pt-4 border-t border-white/5">
-            <p className="text-xs text-text-muted">
-              + Full stack and blockchain development teams across London and Dubai
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Strategic Partners */}
-      <div className="glass-card p-6">
-        <h3 className="text-base font-semibold mb-4 text-center">Strategic Partners</h3>
-        <div className="flex flex-wrap justify-center gap-2">
-          {partners.map((p) => (
-            <span
-              key={p}
-              className="px-3 py-1.5 rounded-full bg-white/5 text-xs text-text-secondary"
-            >
-              {p}
-            </span>
-          ))}
-        </div>
       </div>
     </SectionWrapper>
   );
