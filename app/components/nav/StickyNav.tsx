@@ -63,10 +63,11 @@ export default function StickyNav() {
           <Image
             src="/logos/sharematch-lockup.png"
             alt="ShareMatch"
-            width={200}
-            height={48}
+            width={400}
+            height={111}
+            unoptimized
             className={`transition-all duration-300 ${
-              scrolled ? "h-10 md:h-14 w-auto" : "h-12 md:h-20 w-auto"
+              scrolled ? "h-8 md:h-10 w-auto" : "h-10 md:h-14 w-auto"
             }`}
           />
 

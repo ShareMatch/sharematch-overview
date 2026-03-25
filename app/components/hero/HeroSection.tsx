@@ -26,9 +26,10 @@ export default function HeroSection() {
           <Image
             src="/logos/sharematch-lockup.png"
             alt="ShareMatch"
-            width={280}
-            height={64}
-            className="h-12 md:h-16 w-auto"
+            width={400}
+            height={111}
+            unoptimized
+            className="h-14 md:h-20 w-auto"
             priority
           />
         </motion.div>
