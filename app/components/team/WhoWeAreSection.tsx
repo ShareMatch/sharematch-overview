@@ -77,6 +77,7 @@ export default function WhoWeAreSection() {
               loop
               muted
               playsInline
+              aria-label="ShareMatch platform walkthrough showing live markets, trading, and AI analytics"
               className="w-full h-full object-cover"
             >
               <source src="/videos/platform-walkthrough.mp4" type="video/mp4" />

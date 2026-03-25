@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description:
       "Performance-based digital assets across sport, culture, and global events. Built on Solana. Backed by a formal Fatwa.",
     type: "website",
+    images: ["/screenshots/LoggedView.png"],
   },
 };
 

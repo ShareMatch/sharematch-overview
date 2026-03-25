@@ -18,7 +18,7 @@ export default function CTASection() {
         >
           <Image
             src="/logos/sharematch-mark.png"
-            alt=""
+            alt="ShareMatch"
             width={48}
             height={48}
             className="mx-auto mb-8 opacity-60"

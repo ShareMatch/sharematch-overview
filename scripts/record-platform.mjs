@@ -3,9 +3,14 @@ import { mkdir } from "fs/promises";
 import { execSync } from "child_process";
 import path from "path";
 
-const URL = "https://rwa.sharematch.me";
-const EMAIL = "cmwtrading55@gmail.com";
-const PASSWORD = "test.123";
+const URL = process.env.RWA_URL || "https://rwa.sharematch.me";
+const EMAIL = process.env.RWA_EMAIL;
+const PASSWORD = process.env.RWA_PASSWORD;
+
+if (!EMAIL || !PASSWORD) {
+  console.error("Set RWA_EMAIL and RWA_PASSWORD environment variables");
+  process.exit(1);
+}
 const OUTPUT_DIR = path.resolve("scripts/frames");
 const VIDEO_OUT = path.resolve("public/videos/platform-walkthrough.mp4");
 
