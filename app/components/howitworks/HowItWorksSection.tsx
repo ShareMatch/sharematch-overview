@@ -13,6 +13,7 @@ const steps = [
     title: "Sign Up & Verify",
     description: "Create an account with instant KYC verification. Geolocation compliance ensures you are in a supported jurisdiction.",
     screenshot: "/screenshots/step-1-signup.png",
+    focus: "right top",
   },
   {
     icon: Wallet,
@@ -20,6 +21,7 @@ const steps = [
     title: "Deposit Funds",
     description: "Deposit USDC or use supported local payment rails. Funds convert to ShareMatch Tokens (SMT) at 1:1.",
     screenshot: "/screenshots/step-2-deposit.png",
+    focus: "80% 0%",
   },
   {
     icon: BarChart3,
@@ -27,6 +29,7 @@ const steps = [
     title: "Browse Markets",
     description: "Choose from 10+ performance indices: EPL, UCL, SPL, NBA, NFL, F1, T20 Cricket, FIFA World Cup, and more.",
     screenshot: "/screenshots/step-3-markets.png",
+    focus: "left center",
   },
   {
     icon: TrendingUp,
@@ -34,6 +37,7 @@ const steps = [
     title: "Trade Performance Tokens",
     description: "Buy Index Asset Tokens (IATs) whose value is tied to real-world performance outcomes. No odds, no house, no gambling.",
     screenshot: "/screenshots/step-4-trade.png",
+    focus: "center 30%",
   },
   {
     icon: Bot,
@@ -41,6 +45,7 @@ const steps = [
     title: "AI-Powered Insights",
     description: "HAL AI provides real-time, search-grounded analysis, news summaries, and educational content to support your decisions.",
     screenshot: "/screenshots/step-5-ai.png",
+    focus: "center center",
   },
   {
     icon: ArrowDownToLine,
@@ -48,6 +53,7 @@ const steps = [
     title: "Settle & Withdraw",
     description: "Deterministic on-chain settlement at market close. Withdraw to USDC at any time. Fully auditable on Solana.",
     screenshot: "/screenshots/step-6-settle.png",
+    focus: "center 40%",
   },
 ];
 
@@ -82,8 +88,10 @@ export default function HowItWorksSection() {
                 src={s.screenshot}
                 alt={s.title}
                 fill
-                className="object-cover object-top"
+                style={{ objectPosition: s.focus }}
+                className="object-cover transform rotate-[-3deg] scale-[1.8] group-hover:rotate-[-1deg] group-hover:scale-[1.9] transition-transform duration-500"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/40 via-transparent to-transparent" />
             </div>
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">

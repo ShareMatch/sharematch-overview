@@ -3,39 +3,28 @@
 import { motion } from "framer-motion";
 import SectionWrapper from "../common/SectionWrapper";
 import Badge from "../common/Badge";
-import GlowCard from "../common/GlowCard";
-import { Shield, Cpu, Globe, Scale, Bookmark } from "lucide-react";
+import { Scale, BookOpen, FileCheck, Shield, Cpu } from "lucide-react";
 
-const pillars = [
+const points = [
   {
     icon: Scale,
-    title: "Fatwa Backed & Haqq Mali",
-    description:
-      "Independent Shariah Fatwa recognises our tokens as Haqq Mali, a legitimate financial asset that can be possessed, transferred, inherited, and traded under Islamic law.",
+    text: "Official Fatwa from leading global Islamic scholars confirming full Shariah compliance",
+  },
+  {
+    icon: BookOpen,
+    text: "All assets follow AAOIFI standards, the global benchmark for Islamic financial compliance",
+  },
+  {
+    icon: FileCheck,
+    text: "Settlement technology and market structure under global patent and trademark application",
   },
   {
     icon: Shield,
-    title: "Patent-Pending IP",
-    description:
-      "Smart-contract logic, compliance workflows, and settlement mechanisms are patent-pending. Global trademark applications in progress across GCC, Asia Pacific, and Europe.",
+    text: "Halal financial market alternative to Polymarket, Kalshi, and DraftKings",
   },
   {
     icon: Cpu,
-    title: "AI-Native Platform",
-    description:
-      "HAL, our proprietary multi-agent AI engine, powers real-time analytics, Shariah compliance screening, content generation, and market intelligence.",
-  },
-  {
-    icon: Globe,
-    title: "Strategic Backing",
-    description:
-      "Backed by institutional partners across M&A advisory, blockchain, compliance, and payment infrastructure. GCC Royal Family Office on the cap table.",
-  },
-  {
-    icon: Bookmark,
-    title: "Fully Regulated",
-    description:
-      "Engineered for full regulatory approval across the GCC, ensuring your investments are secure, officially recognised, and fully protected.",
+    text: "Built on Solana, enabling high-throughput, low-cost on-chain settlement",
   },
 ];
 
@@ -58,45 +47,63 @@ export default function WhoWeAreSection() {
         </p>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="relative max-w-4xl mx-auto mb-16"
-      >
-        <div className="browser-frame">
-          <div className="browser-frame-bar">
-            <div className="browser-dot bg-red-500" />
-            <div className="browser-dot bg-yellow-500" />
-            <div className="browser-dot bg-green-500" />
+      <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+        {/* Left: Video */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative"
+        >
+          <div className="browser-frame">
+            <div className="browser-frame-bar">
+              <div className="browser-dot bg-red-500" />
+              <div className="browser-dot bg-yellow-500" />
+              <div className="browser-dot bg-green-500" />
+            </div>
+            <div className="relative aspect-video overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                aria-label="ShareMatch platform walkthrough showing live markets, trading, and AI analytics"
+                className="w-full h-full object-cover"
+              >
+                <source src="/videos/platform-walkthrough.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
-          <div className="relative aspect-video overflow-hidden">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              aria-label="ShareMatch platform walkthrough showing live markets, trading, and AI analytics"
-              className="w-full h-full object-cover"
-            >
-              <source src="/videos/platform-walkthrough.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-        <div className="absolute -inset-10 -z-10 bg-emerald-500/5 rounded-full blur-3xl overflow-hidden pointer-events-none" />
-      </motion.div>
+          <div className="absolute -inset-10 -z-10 bg-emerald-500/5 rounded-full blur-3xl overflow-hidden pointer-events-none" />
+        </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {pillars.map((p, i) => (
-          <GlowCard key={p.title} delay={i * 0.1} className="p-6">
-            <p.icon className="w-8 h-8 text-gold-400 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">{p.title}</h3>
-            <p className="text-sm text-text-secondary leading-relaxed">
-              {p.description}
-            </p>
-          </GlowCard>
-        ))}
+        {/* Right: 5 bullet points */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="space-y-5"
+        >
+          {points.map((p, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 + i * 0.1, duration: 0.5 }}
+              className="flex items-start gap-4"
+            >
+              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0">
+                <p.icon className="w-5 h-5 text-emerald-400" />
+              </div>
+              <p className="text-text-secondary text-sm leading-relaxed pt-2">
+                {p.text}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </SectionWrapper>
   );

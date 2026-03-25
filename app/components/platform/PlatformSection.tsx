@@ -55,7 +55,7 @@ export default function PlatformSection() {
                 src="/screenshots/LoggedView.png"
                 alt="ShareMatch platform, logged-in view"
                 fill
-                className="object-contain object-center p-2"
+                className="object-cover object-left-top"
                 priority
               />
             </div>

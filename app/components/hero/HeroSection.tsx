@@ -24,7 +24,7 @@ export default function HeroSection() {
           className="flex items-center justify-center mb-12"
         >
           <Image
-            src="/logos/sharematch-lockup.svg"
+            src="/logos/sharematch-lockup.png"
             alt="ShareMatch"
             width={280}
             height={64}
