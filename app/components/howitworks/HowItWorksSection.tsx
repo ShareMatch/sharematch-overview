@@ -82,9 +82,8 @@ export default function HowItWorksSection() {
                 src={s.screenshot}
                 alt={s.title}
                 fill
-                className="object-cover object-top transform rotate-[-2deg] scale-110 group-hover:scale-115 transition-transform duration-500"
+                className="object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 to-transparent" />
             </div>
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">
