@@ -1,9 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import SectionWrapper from "../common/SectionWrapper";
 import Badge from "../common/Badge";
 import { UserPlus, Wallet, BarChart3, TrendingUp, Bot, ArrowDownToLine } from "lucide-react";
 
@@ -53,80 +51,80 @@ const steps = [
 ];
 
 export default function HowItWorksSection() {
-  const [active, setActive] = useState(0);
-
   return (
-    <SectionWrapper id="how">
-      <div className="text-center mb-12">
-        <Badge variant="gold" className="mb-4">
-          How It Works
-        </Badge>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-          How ShareMatch Works in 6 Simple Steps
-        </h2>
-        <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-          From sign-up to settlement, the entire journey is transparent,
-          Shariah-compliant, and blockchain-verified.
-        </p>
-      </div>
-
-      {/* Rotated screenshot, centred */}
-      <div className="flex justify-center mb-16">
-        <div className="relative w-full max-w-md">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={active}
-              initial={{ opacity: 0, rotate: -8, scale: 0.95 }}
-              animate={{ opacity: 1, rotate: -6, scale: 1 }}
-              exit={{ opacity: 0, rotate: -4, scale: 0.95 }}
-              transition={{ duration: 0.4, ease: [0.22, 0.61, 0.36, 1] }}
-              className="rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10"
-            >
-              <Image
-                src={steps[active].screenshot}
-                alt={steps[active].title}
-                width={600}
-                height={400}
-                unoptimized
-                className="w-full h-auto"
-              />
-            </motion.div>
-          </AnimatePresence>
-          <div className="absolute -inset-16 -z-10 bg-emerald-500/8 rounded-full blur-3xl pointer-events-none" />
+    <motion.section
+      id="how"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8, ease: [0.22, 0.61, 0.36, 1] }}
+      className="py-24 md:py-32 overflow-hidden relative"
+    >
+      <div className="section-container mb-12">
+        <div className="text-center max-w-3xl mx-auto">
+          <Badge variant="gold" className="mb-4">
+            Overview
+          </Badge>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+            ShareMatch Platform Features
+          </h2>
+          <p className="text-text-secondary text-lg">
+            A visual reference of the ShareMatch experience—transparent, Shariah-compliant, and seamlessly connected to real-world outcomes.
+          </p>
         </div>
       </div>
 
-      {/* 3x2 step cards grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        {steps.map((s, i) => (
-          <motion.button
-            key={s.step}
-            onClick={() => setActive(i)}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1, duration: 0.6 }}
-            className={`glass-card p-6 text-left transition-all duration-300 cursor-pointer ${
-              i === active
-                ? "border-emerald-500/30 bg-emerald-500/5"
-                : "hover:border-white/10 hover:bg-white/[0.04]"
-            }`}
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                i === active ? "bg-emerald-500/15" : "bg-white/5"
-              }`}>
-                <s.icon className={`w-5 h-5 ${i === active ? "text-emerald-400" : "text-text-muted"}`} />
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 pb-16 lg:pb-32">
+          {steps.map((s, i) => (
+            <motion.div
+              key={s.step}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className={`glass-card rounded-3xl overflow-hidden flex flex-col border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-emerald-500/30 transition-all duration-300 group ${
+                i % 3 === 1 ? "lg:translate-y-12" : ""
+              }`}
+            >
+              {/* Image Section */}
+              <div className="h-[240px] relative bg-emerald-500/5 flex items-center justify-center p-6 border-b border-white/5 overflow-hidden">
+                <div className="relative w-full h-full flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+                  <Image
+                    src={s.screenshot}
+                    alt={s.title}
+                    width={400}
+                    height={300}
+                    unoptimized
+                    priority={i < 2}
+                    className="w-auto h-auto max-w-[110%] max-h-[110%] object-contain drop-shadow-2xl rounded-lg"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
               </div>
-              <span className="text-xs font-mono text-text-muted">{s.step}</span>
-            </div>
-            <h3 className="text-base font-semibold mb-2">{s.title}</h3>
-            <p className="text-sm text-text-secondary leading-relaxed">
-              {s.description}
-            </p>
-          </motion.button>
-        ))}
+
+              {/* Content Section */}
+              <div className="p-6 sm:p-8 flex flex-col flex-grow relative z-10">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-emerald-500/10 border border-emerald-500/20 group-hover:bg-emerald-500/20 transition-colors">
+                    <s.icon className="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform" />
+                  </div>
+                  {/* Subtle step indicator since it's an overview, not strict steps */}
+                  <span className="text-xs font-bold font-mono text-emerald-400/70 tracking-widest uppercase">
+                    Feature {s.step}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-emerald-300 transition-colors">
+                  {s.title}
+                </h3>
+                <p className="text-sm text-text-secondary leading-relaxed">
+                  {s.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </SectionWrapper>
+    </motion.section>
   );
 }
