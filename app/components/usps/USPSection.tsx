@@ -3,7 +3,14 @@
 import SectionWrapper from "../common/SectionWrapper";
 import Badge from "../common/Badge";
 import GlowCard from "../common/GlowCard";
-import { ShieldCheck, Lock, Brain, Layers, Scale, Fingerprint } from "lucide-react";
+import {
+  ShieldCheck,
+  Lock,
+  Brain,
+  Layers,
+  Scale,
+  Fingerprint,
+} from "lucide-react";
 
 const usps = [
   {
@@ -73,7 +80,9 @@ export default function USPSection() {
             glowColor={u.glow}
             className="p-6"
           >
-            <u.icon className={`w-8 h-8 mb-4 ${u.glow === "gold" ? "text-gold-400" : "text-emerald-400"}`} />
+            <u.icon
+              className={`w-8 h-8 mb-4 ${u.glow === "gold" ? "text-gold-400" : "text-emerald-400"}`}
+            />
             <h3 className="text-base font-semibold mb-2">{u.title}</h3>
             <p className="text-sm text-text-secondary leading-relaxed">
               {u.description}
@@ -83,7 +92,8 @@ export default function USPSection() {
       </div>
 
       {/* Third-party reinforcement */}
-      <div className="mt-16 glass-card p-8 max-w-4xl mx-auto">
+      {/*
+        <div className="mt-16 glass-card p-8 max-w-4xl mx-auto">
         <h3 className="text-lg font-semibold text-center mb-6">Reinforced by Third Parties</h3>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="flex gap-3">
@@ -127,6 +137,57 @@ export default function USPSection() {
               <p className="text-sm font-semibold mb-1">KYC/AML by SumSub</p>
               <p className="text-xs text-text-secondary leading-relaxed">
                 Industry-leading identity verification and anti-money laundering compliance powered by SumSub, trusted by thousands of regulated platforms globally.
+              </p>
+            </div>
+          </div>
+        </div>
+      */}
+
+      {/* Fatwa quotes */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16 max-w-4xl mx-auto">
+        {/* Quote 1 */}
+        <div className="relative pt-3 px-5 pb-5 rounded-xl bg-bg-card border border-gold-500/10">
+          <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-gold-500 to-emerald-500 rounded-full" />
+          <div className="text-2xl text-gold-500/30 font-serif leading-none mb-0">
+            &quot;
+          </div>
+          <blockquote className="text-text-secondary text-xs leading-relaxed mt-0 mb-0 italic">
+            These tokens constitute a recognised financial asset… Each token
+            represents a fully defined contractual entitlement (haqq mali) that
+            may be possessed, transferred, inherited and traded in accordance
+            with Shariah principles.
+          </blockquote>
+          <div className="flex items-center gap-2 mt-3">
+            <div className="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center">
+              <ShieldCheck className="w-4 h-4 text-gold-400" />
+            </div>
+            <div>
+              <p className="text-xs font-medium">Independent Shariah Board</p>
+              <p className="text-[10px] text-text-muted">Formal Fatwa Ruling</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Quote 2 */}
+        <div className="relative pt-3 px-5 pb-5 rounded-xl bg-bg-card border border-gold-500/10">
+          <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-gold-500 to-emerald-500 rounded-full" />
+          <div className="text-2xl text-gold-500/30 font-serif leading-none mb-0">
+            &quot;
+          </div>
+          <blockquote className="text-text-secondary text-xs leading-relaxed mt-0 mb-0 italic">
+            The HAL‑AI Engine is a proprietary, Shariah-compliant utility
+            accessible through IAT holding, enabling users to perform in-app
+            research, analyse event data, and derive contextual insights in
+            accordance with Shariah governance principles.
+          </blockquote>
+          <div className="flex items-center gap-2 mt-3">
+            <div className="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center">
+              <ShieldCheck className="w-4 h-4 text-gold-400" />
+            </div>
+            <div>
+              <p className="text-xs font-medium">HAL‑AI Engine</p>
+              <p className="text-[10px] text-text-muted">
+                Real-time analytics &amp; scholar-assist
               </p>
             </div>
           </div>

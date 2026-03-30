@@ -9,40 +9,47 @@ const milestones = [
   {
     date: "Dec 2025",
     title: "Shariah Fatwa Secured",
-    detail: "Independent Fatwa covering contract structure, risk transfer, fees, custody, and settlement logic.",
+    detail:
+      "Independent Fatwa covering contract structure, risk transfer, fees, custody, and settlement logic.",
     completed: true,
   },
   {
     date: "Mar 2026",
     title: "Platform Live & Trading",
-    detail: "Soft launch with VIP users. 10+ performance indices. Solana on-chain settlement deployed.",
+    detail:
+      "Soft launch with VIP users. 10+ performance indices. Solana on-chain settlement deployed.",
     completed: true,
     highlight: true,
   },
   {
     date: "Apr 2026",
     title: "KSA Rollout",
-    detail: "Invitation-only launch in Saudi Arabia with STC Pay, urpay, and tiqmo payment rails. 1,000 VIP users.",
+    detail:
+      "Invitation-only launch in Saudi Arabia with STC Pay, urpay, and tiqmo payment rails. 1,000 VIP users.",
   },
   {
     date: "May 2026",
     title: "Mobile App & GCC Expansion",
-    detail: "Full mobile app release via Flutter. Wider GCC and Indonesia market entry. Esports markets go live.",
+    detail:
+      "Full mobile app release via Flutter. Wider GCC and Indonesia market entry. Esports markets go live.",
   },
   {
     date: "Jun 2026",
     title: "FIFA World Cup 2026",
-    detail: "Global onboarding funnel via the world's biggest sporting event. Projected 245,000 active users.",
+    detail:
+      "Global onboarding funnel via the world's biggest sporting event. Projected 245,000 active users.",
   },
   {
     date: "Jul 2026",
     title: "Esports World Cup, Riyadh",
-    detail: "Twitch, Discord, and creator collaborations. Targeted expansion into esports demographics.",
+    detail:
+      "Twitch, Discord, and creator collaborations. Targeted expansion into esports demographics.",
   },
   {
     date: "2027+",
     title: "Global Scale",
-    detail: "Expansion to weather indices, commodities, and corporate KPIs. Asia Pacific, MENA, Africa, and global diaspora rollout.",
+    detail:
+      "Expansion to weather indices, commodities, and corporate KPIs. Asia Pacific, MENA, Africa, and global diaspora rollout.",
   },
 ];
 
@@ -64,7 +71,8 @@ export default function RoadmapSection() {
           2026: The Inflection Year
         </h2>
         <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-          Every milestone tied to user growth, market expansion, and product delivery.
+          Every milestone tied to user growth, market expansion, and product
+          delivery.
         </p>
       </div>
 
@@ -115,8 +123,8 @@ export default function RoadmapSection() {
                       m.completed
                         ? "bg-emerald-500 border-emerald-400"
                         : m.highlight
-                        ? "bg-gold-500 border-gold-400"
-                        : "bg-bg-elevated border-white/20"
+                          ? "bg-gold-500 border-gold-400"
+                          : "bg-bg-elevated border-white/20"
                     }`}
                   />
                 </div>

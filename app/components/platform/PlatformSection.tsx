@@ -22,7 +22,7 @@ export default function PlatformSection() {
   return (
     <SectionWrapper id="platform" className="bg-bg-secondary">
       <div className="text-center mb-12">
-        <Badge variant="emerald" className="mb-4">
+        <Badge variant="gold" className="mb-4">
           The Platform
         </Badge>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
@@ -80,18 +80,24 @@ export default function PlatformSection() {
         <div className="absolute -inset-10 -z-10 bg-gold-500/5 rounded-full blur-3xl overflow-hidden pointer-events-none" />
       </motion.div>
 
-      <div className="flex flex-wrap justify-center gap-3">
-        {capabilities.map((cap, i) => (
-          <motion.div
-            key={cap}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.08, duration: 0.4 }}
-          >
-            <Badge variant="emerald">{cap}</Badge>
-          </motion.div>
-        ))}
+      <div className="flex flex-col items-center gap-2">
+        <span className="text-xs text-text-secondary font-semibold text-muted-foreground tracking-wide">
+          Market Indices
+        </span>
+
+        <div className="flex flex-wrap justify-center gap-3">
+          {capabilities.map((cap, i) => (
+            <motion.div
+              key={cap}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08, duration: 0.4 }}
+            >
+              <Badge variant="emerald">{cap}</Badge>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </SectionWrapper>
   );

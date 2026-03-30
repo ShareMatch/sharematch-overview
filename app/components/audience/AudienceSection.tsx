@@ -71,7 +71,7 @@ export default function AudienceSection() {
       </div>
 
       {/* Key demographics */}
-      <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto mb-16">
+      <div className="grid grid-cols-1 xs:grid-cols-2 gap-4 max-w-lg mx-auto mb-16">
         {demographics.map((d, i) => (
           <motion.div
             key={d.label}

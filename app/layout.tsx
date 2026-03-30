@@ -10,7 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ShareMatch, The World\u2019s First Shariah-Compliant Tokenised Asset Marketplace",
+  title:
+    "ShareMatch, The World\u2019s First Shariah-Compliant Tokenised Asset Marketplace",
   description:
     "Performance-based digital assets across sport, culture, and global events. Built on Solana. Backed by a formal Fatwa.",
   openGraph: {

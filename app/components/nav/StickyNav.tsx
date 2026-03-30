@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const NAV_ITEMS = [
@@ -16,6 +16,7 @@ const NAV_ITEMS = [
 export default function StickyNav() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -45,6 +46,11 @@ export default function StickyNav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (id: string) => {
+    setMobileMenuOpen(false);
+    setActive(id);
+  };
+
   return (
     <>
       <motion.div
@@ -53,10 +59,8 @@ export default function StickyNav() {
       />
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-bg-primary/80 backdrop-blur-xl border-b border-white/5 py-2 md:py-3"
-            : "bg-transparent py-3 md:py-5"
+        className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,padding] duration-500 ease-out will-change-[padding] ${
+          scrolled ? "bg-bg-primary py-2 md:py-3" : "bg-bg-primary py-3 md:py-5"
         }`}
       >
         <div className="section-container flex items-center justify-between">
@@ -66,11 +70,12 @@ export default function StickyNav() {
             width={400}
             height={111}
             unoptimized
-            className={`transition-all duration-300 ${
-              scrolled ? "h-8 md:h-10 w-auto" : "h-10 md:h-14 w-auto"
+            className={`h-10 md:h-14 w-auto origin-left transition-transform duration-500 ease-out will-change-transform ${
+              scrolled ? "scale-95 md:scale-75" : "scale-100"
             }`}
           />
 
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {NAV_ITEMS.map((item) => (
               <a
@@ -89,12 +94,93 @@ export default function StickyNav() {
 
           <a
             href="mailto:will@sharematch.me"
-            className="hidden lg:inline-flex items-center px-5 py-2 text-sm font-semibold rounded-full bg-emerald-500 text-bg-primary hover:bg-emerald-400 transition-colors"
+            className="hidden lg:inline-flex items-center px-5 py-2 text-sm font-semibold rounded-full bg-[#2e3742] text-white hover:opacity-90 transition-all duration-300"
           >
             Get in Touch
           </a>
+
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 text-white"
+            aria-label="Toggle menu"
+          >
+            <div className="w-6 h-5 relative flex flex-col justify-between">
+              <span
+                className={`w-full h-0.5 bg-white rounded-full transition-all duration-300 ${
+                  mobileMenuOpen ? "rotate-45 translate-y-2" : ""
+                }`}
+              />
+              <span
+                className={`w-full h-0.5 bg-white rounded-full transition-all duration-300 ${
+                  mobileMenuOpen ? "opacity-0" : ""
+                }`}
+              />
+              <span
+                className={`w-full h-0.5 bg-white rounded-full transition-all duration-300 ${
+                  mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                }`}
+              />
+            </div>
+          </button>
         </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-40 bg-bg-primary/95 backdrop-blur-xl lg:hidden"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div
+              className="flex flex-col items-center justify-center h-full gap-2 px-6"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {NAV_ITEMS.map((item, index) => (
+                <motion.a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  onClick={() => handleNavClick(item.id)}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{
+                    duration: 0.25,
+                    delay: 0.1 + index * 0.04,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className={`w-full max-w-xs text-center py-3 px-6 text-lg rounded-xl transition-colors ${
+                    active === item.id
+                      ? "text-emerald-400 bg-emerald-500/10"
+                      : "text-text-secondary hover:text-white hover:bg-white/5"
+                  }`}
+                >
+                  {item.label}
+                </motion.a>
+              ))}
+              <motion.a
+                href="mailto:will@sharematch.me"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{
+                  duration: 0.25,
+                  delay: 0.1 + NAV_ITEMS.length * 0.04,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="mt-4 w-full max-w-xs text-center py-3 px-6 text-lg font-semibold rounded-full bg-[#2e3742] text-white hover:opacity-90 transition-all duration-300"
+              >
+                Get in Touch
+              </motion.a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
