@@ -29,9 +29,8 @@ export default function CTASection() {
           </h2>
 
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-10">
-            Step into the future of Halal SportsFi investing. Be the first to
-            experience the world&rsquo;s only Shariah-compliant sports
-            investment market when we open our digital doors.
+            Be the first to experience the world&rsquo;s only Shariah-compliant
+            sports investment market when we open our digital doors.
           </p>
 
           <div className="flex flex-col items-center gap-6 mb-32 sm:mb-16">
