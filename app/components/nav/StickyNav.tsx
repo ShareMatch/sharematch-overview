@@ -91,7 +91,7 @@ export default function StickyNav() {
           </div>
 
           <a
-            href="mailto:will@sharematch.me"
+            href="#join"
             className="hidden lg:inline-flex items-center px-5 py-2 text-sm font-semibold rounded-full bg-[#2e3742] text-white hover:opacity-90 transition-all duration-300"
           >
             Get in Touch
@@ -162,7 +162,8 @@ export default function StickyNav() {
                 </motion.a>
               ))}
               <motion.a
-                href="mailto:will@sharematch.me"
+                href="#join"
+                onClick={() => setMobileMenuOpen(false)}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}

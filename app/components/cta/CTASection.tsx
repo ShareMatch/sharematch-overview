@@ -34,7 +34,7 @@ export default function CTASection() {
           </p>
 
           <div className="flex flex-col items-center gap-6 mb-32 sm:mb-16">
-            <a
+            {/*<a
               href="https://rwa.sharematch.me"
               target="_blank"
               rel="noopener noreferrer"
@@ -54,14 +54,14 @@ export default function CTASection() {
                   d="M13 7l5 5m0 0l-5 5m5-5H6"
                 />
               </svg>
-            </a>
+            </a>*/}
 
             <div className="text-center">
               <p className="text-sm text-text-secondary mb-3">
                 Looking for business or investment opportunities?
               </p>
               <a
-                href="mailto:will@sharematch.me"
+                href="mailto:paul@sharematch.me"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/10 text-text-primary font-semibold text-lg hover:bg-white/5 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Contact Us
