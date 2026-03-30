@@ -59,9 +59,7 @@ export default function StickyNav() {
       />
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,padding] duration-500 ease-out will-change-[padding] ${
-          scrolled ? "bg-bg-primary py-2 md:py-3" : "bg-bg-primary py-3 md:py-5"
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 bg-bg-primary py-3 md:py-4"
       >
         <div className="section-container flex items-center justify-between">
           <Image
@@ -173,7 +171,7 @@ export default function StickyNav() {
                   delay: 0.1 + NAV_ITEMS.length * 0.04,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="mt-4 w-full max-w-xs text-center py-3 px-6 text-lg font-semibold rounded-full bg-[#2e3742] text-white hover:opacity-90 transition-all duration-300"
+                className="mt-4 w-full max-w-xs text-center py-3 px-6 text-lg font-semibold rounded-full bg-[#2e3742] text-white hover:opacity-90 transition-opacity duration-300"
               >
                 Get in Touch
               </motion.a>
