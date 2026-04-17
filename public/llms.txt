@@ -1,0 +1,32 @@
+# ShareMatch
+
+> The world's first Shariah-compliant tokenised asset marketplace. Performance-based digital assets across sport, culture, and global events. Built on Solana. Backed by a formal Fatwa.
+
+ShareMatch is a regulated real-world-asset (RWA) exchange that fractionalises sport, culture, and event outcomes into Shariah-compliant tradeable shares. Minimum ticket: $5. Settlement: USDC on Solana.
+
+## Products
+
+- [Markets](https://sharematch.me/markets): Live tokenised markets (team performance, event outcomes, cultural indices)
+- [How it works](https://sharematch.me/how-it-works): Minting, pricing, settlement, redemption
+- [Shariah compliance](https://sharematch.me/shariah): Fatwa, scholar board, screening process
+- [Invest](https://sharematch.me/invest): Token economics, value accrual, investor deck
+
+## Docs
+
+- [FAQ](https://sharematch.me/faq): Eligibility, KYC, fees, withdrawals
+- [Terms](https://sharematch.me/terms): Legal terms of use
+- [Privacy](https://sharematch.me/privacy): Data handling
+
+## Company
+
+- [About](https://sharematch.me/about): Team, mission, regulatory status
+- [Careers](https://sharematch.me/careers): Open roles
+- [Contact](mailto:hello@sharematch.me)
+
+## Key facts
+
+- **Network**: Solana (low-fee, high-throughput settlement)
+- **Minimum investment**: $5 per trade
+- **Compliance**: Shariah-certified via formal Fatwa; AAOIFI-aligned screening
+- **Regulation**: UAE licensed (see /compliance for jurisdictional details)
+- **Founder**: Will (@sharematch.me, CEO & Co-founder)
