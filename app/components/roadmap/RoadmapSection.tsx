@@ -7,6 +7,13 @@ import Badge from "../common/Badge";
 
 const milestones = [
   {
+    date: "Dec 2025",
+    title: "Shariah Fatwa Secured",
+    detail:
+      "Independent Fatwa covering contract structure, risk transfer, fees, custody, and settlement logic.",
+    completed: true,
+  },
+  {
     date: "May 2026",
     title: "KSA Launch, App Release & GCC Expansion",
     detail:
