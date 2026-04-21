@@ -7,35 +7,15 @@ import Badge from "../common/Badge";
 
 const milestones = [
   {
-    date: "Dec 2025",
-    title: "Shariah Fatwa Secured",
+    date: "May 2026",
+    title: "KSA Launch, App Release & GCC Expansion",
     detail:
-      "Independent Fatwa covering contract structure, risk transfer, fees, custody, and settlement logic.",
-    completed: true,
-  },
-  {
-    date: "Mar 2026",
-    title: "Platform Live & Trading",
-    detail:
-      "Soft launch with VIP users. 10+ performance indices. Solana on-chain settlement deployed.",
-    completed: true,
+      "Invitation-only rollout in Saudi Arabia with STC Pay, urpay, and tiqmo payment rails. Full mobile app release. Wider GCC rollout and Indonesia market entry. Esports markets go live.",
     highlight: true,
   },
   {
-    date: "Apr 2026",
-    title: "KSA Rollout",
-    detail:
-      "Invitation-only launch in Saudi Arabia with STC Pay, urpay, and tiqmo payment rails. 1,000 VIP users.",
-  },
-  {
-    date: "May 2026",
-    title: "Mobile App & GCC Expansion",
-    detail:
-      "Full mobile app release via Flutter. Wider GCC and Indonesia market entry. Esports markets go live.",
-  },
-  {
     date: "Jun 2026",
-    title: "FIFA World Cup 2026",
+    title: "FIFA World Cup",
     detail:
       "Global onboarding funnel via the world's biggest sporting event. Projected 245,000 active users.",
   },
@@ -44,12 +24,6 @@ const milestones = [
     title: "Esports World Cup, Riyadh",
     detail:
       "Twitch, Discord, and creator collaborations. Targeted expansion into esports demographics.",
-  },
-  {
-    date: "2027+",
-    title: "Global Scale",
-    detail:
-      "Expansion to weather indices, commodities, and corporate KPIs. Asia Pacific, MENA, Africa, and global diaspora rollout.",
   },
 ];
 
