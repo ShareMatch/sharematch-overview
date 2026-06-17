@@ -27,6 +27,6 @@ ShareMatch is a regulated real-world-asset (RWA) exchange that fractionalises sp
 
 - **Network**: Solana (low-fee, high-throughput settlement)
 - **Minimum investment**: $5 per trade
-- **Compliance**: Shariah-certified via formal Fatwa; AAOIFI-aligned screening
+- **Compliance**: Shariah-certified via formal Fatwa; independent Shariah-board screening
 - **Regulation**: UAE licensed (see /compliance for jurisdictional details)
 - **Founder**: Will (@sharematch.me, CEO & Co-founder)

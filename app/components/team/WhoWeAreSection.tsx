@@ -11,7 +11,7 @@ const points = [
   },
   {
     icon: BookOpen,
-    text: "All assets follow AAOIFI standards, the global benchmark for Islamic financial compliance",
+    text: "All assets follow ShareMatch's own Shariah standards, ratified by an independent Shariah Advisory Board",
   },
   {
     icon: FileCheck,

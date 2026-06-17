@@ -52,7 +52,7 @@ const usps = [
     icon: Fingerprint,
     title: "Multi-Layered Compliance",
     description:
-      "Advanced KYC/AML identity verification and real-time AI Shariah screening (AAOIFI principles), backed by permanent blockchain records built to keep your portfolio safe and ethical.",
+      "Advanced KYC/AML identity verification and real-time AI Shariah screening, backed by permanent blockchain records built to keep your portfolio safe and ethical.",
     glow: "emerald" as const,
   },
 ];
@@ -123,9 +123,9 @@ export default function USPSection() {
               <Scale className="w-4 h-4 text-emerald-400" />
             </div>
             <div>
-              <p className="text-sm font-semibold mb-1">AAOIFI Standards Compliance</p>
+              <p className="text-sm font-semibold mb-1">Independent Shariah Certification</p>
               <p className="text-xs text-text-secondary leading-relaxed">
-                All tokens structured in accordance with standards published by the Accounting and Auditing Organisation for Islamic Financial Institutions.
+                All tokens structured in accordance with ShareMatch's own Shariah standards, ratified by its independent Shariah Advisory Board.
               </p>
             </div>
           </div>
