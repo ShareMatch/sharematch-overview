@@ -35,7 +35,7 @@ export default function WhoWeAreSection() {
           What is ShareMatch
         </Badge>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-          The Future of Halal SportFi
+          The Future of Halal Sport-Fi
         </h2>
         <p className="text-text-secondary text-lg max-w-2xl mx-auto">
           Built on Solana, the platform enables users to trade sports indices
@@ -79,7 +79,7 @@ export default function WhoWeAreSection() {
             What is ShareMatch
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
-            The Future of Halal SportFi
+            The Future of Halal Sport-Fi
           </h2>
           <p className="text-text-secondary mb-8 leading-relaxed">
             Built on Solana, the platform enables users to trade sports indices
