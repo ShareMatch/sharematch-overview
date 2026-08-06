@@ -25,7 +25,7 @@ export default function CTASection() {
           />
 
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            Step into the future of Halal SportsFi investing
+            Step into the future of Halal Sport-Fi investing
           </h2>
 
           <p className="text-lg text-text-secondary max-w-xl mx-auto mb-10">
